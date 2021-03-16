@@ -5,15 +5,11 @@
     padding: 0;
 }
 
-body{
-    width: 100%;
-}
-
 li, a{
     text-decoration: none;
 }
 
-.header__div{
+#header__div{
     position: relative;
     width: 100%;
     height: 72px;
@@ -21,7 +17,7 @@ li, a{
 
 }
 
-.header__div img{
+#header__div img{
     position: absolute;
     width: 48px;
     height: 48px;
@@ -42,34 +38,36 @@ li, a{
     color: rgb(24, 192, 24);
 }
 
-.header__images{
+#header__images{
     position: relative;
+    font-size: 20px;
 }
 
-.header__images p{
+#header__images p{
     position: absolute;
     z-index: 2;
-    top: 100px;
-    left: 20px;
+    top: 5.0em;
+    left: 1em;
     font-size: 18px;
     font-weight: bolder;
 }
 
-.header__images p b{
+#header__images p b{
     position: relative;
     z-index: 2;
-    top: -10px;
+    top: -0.4em;
+    left: 0.7em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 12px;
     color: rgb(56, 56, 196);
 }
 
 #header__images--logo{
+    width: 60px;
+    height: 60px;
     position: absolute;
-    width: 48px;
-    height: 48px;
-    top: 52px;
-    left: 50px;
+    top: 1.5em;
+    left: 2.4em;
     z-index: 1;
 }
 
@@ -80,29 +78,65 @@ li, a{
     z-index: 0;
 }
 
-#h1__gallery{
-    font-size: 45px;
-    color: rgb(43, 43, 49);
-    margin-left: 80px;
-    margin-top: 72px;
+#section__gallery input{
+    display: none;
 }
 
-.nav__gallery{
-    margin-left: 65px;
-    margin-top: 42px;
+#section__gallery #newAngels:checked ~ #section__gallery--images #dog1, #section__gallery #newAngels:checked ~ #section__gallery--images #dog3,
+#section__gallery #newAngels:checked ~ #section__gallery--images #cat2, #section__gallery #newAngels:checked ~ #section__gallery--images #cat3{
+    display: none;
 }
-.nav__gallery li{
+
+#section__gallery #newAngels:checked ~ #section__gallery--images{
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+
+}
+
+#section__gallery #dogs:checked ~ #section__gallery--images .cats{
+    display: none;
+}
+
+#section__gallery #dogs:checked ~ #section__gallery--images{
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+
+}
+
+#section__gallery #cats:checked ~ #section__gallery--images .dogs{
+    display: none;
+}
+
+#section__gallery #cats:checked ~ #section__gallery--images{
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+
+}
+
+#section__gallery--h1{
+    font-size: 35px;
+    color: rgb(43, 43, 49);
+    margin-left: 1em;
+    margin-top: 1.6em;
+}
+
+#section__gallery--nav{
+    margin-left: 1.25em;
+    margin-top: 2.6em;
+    font-size: 16px;
+}
+
+#section__gallery--nav li{
     display: inline-block;
-    font-size: 20px;
     padding: 0 20px;
 }
 
-.nav__gallery li a:hover{
+#section__gallery--nav li label:hover{
     color: rgb(209, 41, 209);
     text-decoration: underline;
 }
 
-.section__gallery{
+#section__gallery--images{
     display: grid;
     margin-top: 68px;
     grid-template-rows: repeat(6, 1fr);
@@ -114,7 +148,7 @@ li, a{
     align-content: center;
 }
 
-.section__gallery figure{
+#section__gallery--images figure{
     display: flex;
     flex-direction: column;
     width: 382px;
@@ -122,21 +156,23 @@ li, a{
     background-color: rgb(3, 3, 53);
 }
 
-.section__gallery figcaption{
+#section__gallery--images figcaption{
     font-size: 24px;
     font-weight: bolder;
     color: whitesmoke;
     text-align: center;
     margin-top: 5px;
 }
-.section__gallery p{
+
+#section__gallery--images p{
     font-size: 24px;
     color: whitesmoke;
     text-align: center;
     margin-top: 5px;
     font-weight: normal;
 }
-.section__gallery a{
+
+#section__gallery--images a{
     font-size: 24px;
     color: whitesmoke;
     text-align: center;
@@ -144,7 +180,7 @@ li, a{
     font-weight: normal;
 }
 
-.section__gallery button{
+#section__gallery--images button{
     background: transparent;
     border: 2px solid white;
     margin-top: 24px;
@@ -153,7 +189,7 @@ li, a{
     align-self: center;
 }
 
-.section__gallery button:hover{
+#section__gallery--images button:hover{
     background-color: rgb(62, 62, 240, 0.4);
 }
 
@@ -162,9 +198,9 @@ li, a{
 }
 
 #section__gallery--button div{
+    margin: 31px auto;
     width: 175px;
     height: 48px;
-    margin: 31px auto;
 }
 
 #section__gallery--button button{
@@ -178,7 +214,7 @@ li, a{
     background-color: rgb(13, 136, 13, 0.3);
 }
 
-#section__gallery--button a{
+#section__gallery--button label{
     font-size: 24px;
     color: rgb(16, 2, 65);;
     text-align: center;
@@ -191,27 +227,28 @@ li, a{
     background-color: rgb(12, 2, 49);
     color: whitesmoke;
     font-size: 52px;
-    padding: 40px 80px;
-    height: 900px;
+    padding: 0.75em 1.5em;
+    height: 17.3em;
 }
 
 #section__contact--message{
     font-size: 24px;
     padding: 30px 0px;
 }
+
 #section__contact--form{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
     width: 100%;
-    height: 550px;
+    height: 500px;
     font-size: 12px;
 }
 
 #form__name, #form__email{
-    width: 342px;
-    height: 48px;
+    width: 17.5em;
+    height: 2.4em;
     font-size: 20px;
     margin-bottom: 24px;
     padding-left: 16px;
@@ -232,8 +269,8 @@ li, a{
 }
 
 #form__message{
-    width: 342px;
-    height: 120px;
+    width: 17.5em;
+    height: 6em;
     font-size: 20px;
     order: 1;
 }
@@ -254,7 +291,7 @@ li, a{
     color: whitesmoke;
 }
 
-#footer{
+footer{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

@@ -1,22 +1,23 @@
 *{
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  /*Sin cambios*/
     margin: 0;
     padding: 0;
 }
 
-li, a{
+li, a{                                                                             /*Sin cambios*/
     text-decoration: none;
 }
 
-.header__div{
+#header__div{                       /*Sin cambios*/
     position: relative;
+    width: 100%;
     height: 72px;
     background-color: rgb(22, 4, 92);
 
 }
 
-.header__div img{
+#header__div img{             /*Sin cambios*/
     position: absolute;
     width: 48px;
     height: 48px;
@@ -24,7 +25,7 @@ li, a{
     left: 20px;
 }
 
-#header__div--contact{
+#header__div--contact{     /*Sin cambios*/
     display: inline-block;
     position: absolute;
     top: 17px;
@@ -33,28 +34,29 @@ li, a{
     font-weight: bolder;
     color: whitesmoke;
 }
-#header__div--contact:hover{
+#header__div--contact:hover{         /*Sin cambios*/
     color: rgb(24, 192, 24);
 }
 
-.header__images{
+#header__images{              /*Sin cambios*/
     position: relative;
+    font-size: 20px;
 }
 
-.header__images p{
+#header__images p{
     position: absolute;
     z-index: 2;
-    top: 190px;
-    left: 110px;
+    top: 3.8em;
+    left: 2.2em;
     font-size: 50px;
     font-weight: bolder;
 }
 
-.header__images p b{
+#header__images p b{
     position: relative;
     z-index: 2;
-    top: -10px;
-    left: 40px;
+    top: -0.4em;
+    left: 1.6em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 25px;
     color: rgb(56, 56, 196);
@@ -62,41 +64,79 @@ li, a{
 
 #header__images--logo{
     position: absolute;
-    top: 112px;
-    left: 228px;
+    top: 5.6em;
+    left: 11.4em;
     z-index: 1;
 }
 
-#header__images--img{
+#header__images--img{           /*Sin cambios*/
     position: relative;
     cursor: pointer;
     width: 100%;
     z-index: 0;
 }
 
-#h1__gallery{
-    font-size: 45px;
-    color: rgb(43, 43, 49);
-    margin-left: 80px;
-    margin-top: 72px;
+#section__gallery input{
+    display: none;
 }
 
-.nav__gallery{
+#section__gallery #newAngels:checked ~ #section__gallery--images #dog1, #section__gallery #newAngels:checked ~ #section__gallery--images #dog3,
+#section__gallery #newAngels:checked ~ #section__gallery--images #cat2, #section__gallery #newAngels:checked ~ #section__gallery--images #cat3{
+    display: none;
+}
+
+#section__gallery #newAngels:checked ~ #section__gallery--images{
+
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+#section__gallery #dogs:checked ~ #section__gallery--images .cats{
+    display: none;
+}
+
+#section__gallery #dogs:checked ~ #section__gallery--images{
+
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+
+}
+#section__gallery #cats:checked ~ #section__gallery--images .dogs{
+    display: none;
+}
+
+#section__gallery #cats:checked ~ #section__gallery--images{
+
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+#section__gallery--h1{    /*Sin cambios*/
+    font-size: 45px;
+    color: rgb(43, 43, 49);
+    margin-left: 1.8em;
+    margin-top: 1.6em;
+}
+
+#section__gallery--nav{     /*Sin cambios*/
     margin-left: 65px;
     margin-top: 42px;
 }
-.nav__gallery li{
+
+#section__gallery--nav li{        /*Sin cambios*/
     display: inline-block;
     font-size: 20px;
     padding: 0 20px;
 }
 
-.nav__gallery li a:hover{
+#section__gallery--nav li label:hover{       /*Sin cambios*/
     color: rgb(209, 41, 209);
     text-decoration: underline;
 }
 
-.section__gallery{
+#section__gallery--images{
     display: grid;
     margin-top: 68px;
     grid-template-rows: repeat(2, 1fr);
@@ -108,7 +148,7 @@ li, a{
     align-content: center;
 }
 
-.section__gallery figure{
+#section__gallery--images figure{   /*Sin cambios*/
     display: flex;
     flex-direction: column;
     width: 382px;
@@ -116,21 +156,23 @@ li, a{
     background-color: rgb(3, 3, 53);
 }
 
-.section__gallery figcaption{
+#section__gallery--images figcaption{    /*Sin cambios*/
     font-size: 24px;
     font-weight: bolder;
     color: whitesmoke;
     text-align: center;
     margin-top: 5px;
 }
-.section__gallery p{
+
+#section__gallery--images p{   /*Sin cambios*/
     font-size: 24px;
     color: whitesmoke;
     text-align: center;
     margin-top: 5px;
     font-weight: normal;
 }
-.section__gallery a{
+
+#section__gallery--images a{    /*Sin cambios*/
     font-size: 24px;
     color: whitesmoke;
     text-align: center;
@@ -138,7 +180,7 @@ li, a{
     font-weight: normal;
 }
 
-.section__gallery button{
+#section__gallery--images button{   /*Sin cambios*/
     background: transparent;
     border: 2px solid white;
     margin-top: 24px;
@@ -147,32 +189,32 @@ li, a{
     align-self: center;
 }
 
-.section__gallery button:hover{
+#section__gallery--images button:hover{    /*Sin cambios*/
     background-color: rgb(62, 62, 240, 0.4);
 }
 
-#section__gallery--button{
+#section__gallery--button{    /*Sin cambios*/
     height: 136px;
 }
 
-#section__gallery--button div{
+#section__gallery--button div{   /*Sin cambios*/
     margin: 31px auto;
     width: 175px;
     height: 48px;
 }
 
-#section__gallery--button button{
+#section__gallery--button button{  /*Sin cambios*/
     background-color: transparent;
     border: 2px solid rgb(16, 2, 65);
     width: 175px;
     height: 48px;
 }
 
-#section__gallery--button button:hover{
+#section__gallery--button button:hover{    /*Sin cambios*/
     background-color: rgb(13, 136, 13, 0.3);
 }
 
-#section__gallery--button a{
+#section__gallery--button label{       /*Sin cambios*/
     font-size: 24px;
     color: rgb(16, 2, 65);;
     text-align: center;
@@ -185,36 +227,37 @@ li, a{
     background-color: rgb(12, 2, 49);
     color: whitesmoke;
     font-size: 52px;
-    padding: 40px 80px;
-    height: 577px;
+    padding: 0.75em 1.5em;
+    height: 11em;
 }
 
-#section__contact--message{
+#section__contact--message{      /*Sin cambios*/
     font-size: 24px;
     padding: 30px 0px;
 }
+
 #section__contact--form{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 897px;
-    height: 272px;
+    width: 74.8em;
+    height: 22.7em;
     font-size: 12px;
 }
 
 #form__name, #form__email{
-    width: 382px;
-    height: 48px;
+    width: 19.1em;
+    height: 2.4em;
     font-size: 20px;
-    margin-bottom: 24px;
-    padding-left: 16px;
+    margin-bottom: 1.2em;
+    padding-left: 0.8em;
 }
 
 #form__info{
     margin-top: 32px;
 }
 
-#form__info img{
+#form__info img{   /*Sin cambios*/
     position: relative;
     top: 5px;
     width: 24px;
@@ -223,10 +266,10 @@ li, a{
 }
 
 #form__message{
-    width: 485px;
-    height: 120px;
+    width: 24.3em;
+    height: 6em;
     font-size: 20px;
-    padding-left: 16px;
+    padding-left: 0.8em;
     align-self: flex-end;
 }
 
@@ -240,12 +283,12 @@ li, a{
     color: whitesmoke;
 }
 
-#form__submit a{
+#form__submit a{    /*Sin cambios*/
     font-size: 24px;
     color: whitesmoke;
 }
 
-#footer{
+footer{    /*Sin cambios*/
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -254,17 +297,17 @@ li, a{
     font-size: 24px;
 }
 
-#footer__socialNet img{
+#footer__socialNet img{     /*Sin cambios*/
     margin: 40px 20px;
 }
 
-#footer__author{
+#footer__author{     /*Sin cambios*/
     margin-top: 48px;
     width: 90%;
     border-top: 3px solid rgb(12, 2, 49);
 }
 
-#footer__author p{
+#footer__author p{         /*Sin cambios*/
     height: 82px;
     font-size: 12px;
     margin-top: 22px;
